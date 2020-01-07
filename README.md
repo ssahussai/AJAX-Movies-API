@@ -2,7 +2,7 @@
 
 Created By | Last Updated
 -----------|--------------
-Salma Khan | January 6, 2020
+Salma Khan | January 7, 2020
 
 ## User Stories
 * As a Visitor (AAV), I want to see a form to search for a movie based upon its title.

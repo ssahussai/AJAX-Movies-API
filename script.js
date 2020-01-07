@@ -1,5 +1,5 @@
 /*-- constants --*/
-const BASE_URL = 'http://www.omdbapi.com/?apikey=7de57161&s=';
+const BASE_URL = 'http://www.omdbapi.com/?apikey=7de57161&s=batman'; 
 
 /* app's state variable */
 let currentView, movies; 
@@ -20,7 +20,15 @@ async function init() {
   render();
 }
 
-
 function render() {
+    console.log(movies);
+    indexViewEl.style.display = currentView === 'index' ? 'block' : 'none';
+    if (currentView === 'index') {
+        let result = movies.Search.reduce((result, m) => result +
+            `<div>${m.Title} (${m.Year})</div>`, '');
+        listContainerEl.innerHTML = result;
+      } else if (currentView === 'create') {
+        // TODO
+      }
 }
 
